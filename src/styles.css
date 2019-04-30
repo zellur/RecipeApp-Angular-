@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+.open .dropdown-menu {
+    display: list-item;
+}
+
+.active {
+    color: rgba(68, 7, 7, 0.9);
+    background: lightgrey;
+}
