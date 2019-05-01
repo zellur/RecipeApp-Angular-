@@ -19,8 +19,10 @@ import { RecipeService } from './recipes/recipe.service';
 import { HttpClientModule } from '@angular/common/http';
 import { DataStorageService } from './shared/data-storage.service';
 import { SignupComponent } from './auth/signup/signup.component';
-import { SigninComponent } from './signin/signin.component';
 import { FooterComponent } from './footer/footer.component';
+import { AuthService } from './auth/auth.service';
+import { SigninComponent } from './auth/signin/signin.component';
+import { AuthGuardService } from './auth/auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,7 @@ import { FooterComponent } from './footer/footer.component';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [ShoppingListService, RecipeService, DataStorageService],
+  providers: [ShoppingListService, RecipeService, DataStorageService, AuthService, AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
